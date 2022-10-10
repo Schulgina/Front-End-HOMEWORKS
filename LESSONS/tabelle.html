@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Example</title>
+
+    <style>
+        body {
+            background: lightgrey;
+            font-size: ;
+            font-weight: 100;
+            color: white;
+        }      
+    .wrapper { 
+        width: 600px;
+        height: 250px;
+        display: flex;
+        font-size: 50px ;
+        font-weight: 100;
+        color: white;
+
+        gap: 10px; /*зазор между дочерними элементами*/
+    }
+    /*.left, .right {
+        flex: 1; имеет пропорцию 1 , или можно прописать width: 40%; в каждом .left и .right
+    }*/
+    .left { 
+        flex: 4;
+        background: coral;
+    }
+    .right { 
+        flex: 6;   
+        display: flex;
+        flex-direction: column;
+        gap: 10px; 
+    }
+    .right-2 { 
+        height: 50%;
+        background: greenyellow;
+    }
+    .right-bottom { 
+        display: flex;
+        height: 50%;
+        gap: 10px; 
+    } 
+    .right-3 { 
+        /*height: 100%;*/
+        width: 50%;
+        background: pink;
+    } 
+    .right-4 { 
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px; 
+    }  
+    .right-4a,
+    .right-4b { 
+        height: 50%;
+        background: lightblue;
+    } 
+    .left,
+    .right-2,
+    .right-3,
+    .right-4a,
+    .right-4b { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    </style>
+</head>
+<body>
+    <div class= "wrapper">
+        <div class= "left">
+            1
+        </div>
+        <div class= "right">
+         <div class="right-2">2</div>
+         <div class="right-bottom">
+             <div class="right-3">3</div>
+             <div class="right-4">
+               <div class="right-4a">4a</div>
+               <div class="right-4b">4b</div>
+            </div>
+            </div>
+        </div>
+    </div>>
+
+</body>
+</html>

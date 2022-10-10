@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Units</title>
+    <style>
+      .block {
+        background: gold;
+        width: 50vw;
+        height: 50vh;
+        border-radius: 8px;
+      }
+      .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+    }
+    p {
+        flex: 2;
+        text-align: center;
+    }
+    p:first-child {
+        flex: 6;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="block"></div>
+    <div class="wrapper">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero alias
+      ducimus rem itaque repellat, magni dolorum repellendus veniam dolore eius,
+      nemo voluptatem numquam saepe inventore a ullam enim quae aliquid.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut non eum incidunt, earum porro reiciendis vero tempore totam optio amet sequi aliquam neque commodi quo provident, fugit laudantium, eos doloremque.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut non eum incidunt, earum porro reiciendis vero tempore totam optio amet sequi aliquam neque commodi quo provident, fugit laudantium, eos doloremque.
+    </p>
+</div>
+<div class="wrapper">
+    <div>One</div>
+    <div>Two</div>
+    <div>Three</div>
+</div>
+  </body>
+</html>
