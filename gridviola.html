@@ -11,54 +11,62 @@
         padding: 0;
         box-sizing: border-box;
       }
-      .html,
+      html,
       body,
       .wrapper {
         width: 100%;
         height: 100%;
       }
-      .wrapper>div {
+      .wrapper > div {
         background: rgb(140, 108, 246);
       }
       .wrapper {
         display: grid;
-        grid-template-columns: 120px auto auto 130px;
+        grid-template-columns: 120px auto auto 120px;
         grid-template-rows: 100px auto auto 100px;
-        gap: 8px 8px;
+        gap: 8px;
         grid-template-areas:
           "aside header header banner"
-          "aside main banner aside"
-          "aside main main aside"
-          "footer footer footer aside";
+          "aside main1 main2 banner1"
+          "aside main3 main3 banner1"
+          "footer footer footer banner1";
       }
       .aside {
-        grid-area: 1;
+        grid-area: aside;
       }
       .header {
-        grid-area: 2;
+        grid-area: header;
       }
-      .main {
-        grid-area: 3;
+      .main1 {
+        grid-area: main1;
+      }
+      .main2 {
+        grid-area: main2;
+      }
+      .main3 {
+        grid-area: main3;
+      }
+      .banner1 {
+        grid-area: banner1;
       }
       .banner {
-        grid-area: 4;
+        grid-area: banner;
       }
       .footer {
-        grid-area: 5;
+        grid-area: footer;
       }
     </style>
-
   </head>
   <body>
     <div class="wrapper">
-      <div class="aside">1</div>
-      <div class="header">2</div>
-      <div class="header">2</div>
-      <div class="banner">4</div>
-      <div class="aside">1</div>
-      <div class="main">3</div>
-     
-      <div class="footer">5</div>
+      <div class="aside"></div>
+      <div class="header"></div>
+      <div class="banner"></div>
+      <div class="banner1"></div>
+      <div class="main1"></div>
+      <div class="main2"></div>
+      <div class="main3"></div>
+      <div class="footer"></div>
     </div>
   </body>
 </html>
