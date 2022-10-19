@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .item {
+        background: gold;
+        font-size: 2rem;
+      }
+      .wrapper {
+        display: grid;
+        grid-template-columns: 200px auto auto;
+        grid-template-rows: 150px 150px 150px;
+        gap: 4px;
+        /*grid-auto-flow: column;*/
+        /*grid-auto-rows: 150px; добавили немерянное количество строк по 150px*/
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+  </body>
+</html>

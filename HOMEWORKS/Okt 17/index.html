@@ -26,7 +26,6 @@
         padding: 0;
         box-sizing: border-box;
       }
-
       .sidebar {
         background: rgb(227, 222, 240);
         width: var(--sidebar-width);
@@ -41,71 +40,67 @@
         line-height: 40px;
         padding-top: 40px;
       }
-      ul {
-        color: grey;
+      .nav__links {
         font-size: 10px;
         list-style: none;
       }
-      .navigation {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
+      .nav__link:hover {
+        color: black;
+      }
+      .nav__icon {
         color: rgb(6, 32, 104);
       }
-      .navpicto {
-        font-size: 15px;
-        padding-right: 8px;
-        flex: 1;
-      }
-      a {
+      .nav__link {
         text-decoration: none;
+        justify-content: space-between;
+        display: flex;
         color: grey;
-        flex: 8;
+        font-size: 11px;
+        padding-right: 8px;
       }
       .banner {
         margin-top: 60px;
         width: 210px;
         aspect-ratio: 4 / 5;
         border-radius: 25px;
-        background: linear-gradient(to right, rgb(235, 216, 198), rgb(185, 173, 230));
+        background: linear-gradient(
+          to right,
+          rgb(235, 216, 198),
+          rgb(185, 173, 230)
+        );
         display: flex;
+        align-items: center;
         flex-direction: column;
-        align-items: flex-start;
       }
       .question {
-        flex: 1;
         font-size: 64px;
         align-self: center;
-        color: white;
-        justify-content: center;
+        color: rgb(178, 135, 135);
+        margin-top: -30px;
       }
-      h1 {
-        margin-top: 20px;
+      .content {
         color: grey;
-        font-size: 10px;
-        list-style: none;
+        font-size: 8px;
         text-align: center;
-        flex: 1;
+        padding: 15px 20px 30px 20px;
       }
       h2 {
         margin-top: 40px;
-        flex: 1;
         color: black;
-        font-size: 15px;
-        font-weight: 500;
+        font-size: 16px;
+        font-weight: 600;
         text-align: center;
-        line-height: 40px;
       }
-      .button {
-        flex: 1;
+      .help {
         width: 150px;
-        aspect-ratio: 5 / 1;
+        aspect-ratio: 5 /1;
         border-radius: 20px;
+        border: none;
         background-color: white;
-        border: transparent;
         align-items: center;
+        font-size: 12px;
+        font-weight: 700;
       }
-
       main {
         margin-left: var(--sidebar-width);
         width: calc(100% --var(--sidebar-width));
@@ -119,26 +114,22 @@
       }
       .input {
         font-size: 11 px;
-        padding: 20px;
-        flex: 2;
+        padding: 20px; 
+        border: none;
       }
-      .input:focus {
-        outline: none;
-        border-bottom: 1px solid green;
-      }
-      .input::placeholder {
+      .input:placeholder {
         color: rgb (218, 218, 218);
-        outline: none;
         font-size: 11 px;
       }
       .search {
-        width: 500px;
-        border-radius: 8px;
-        padding-left: 15px;
+        padding-left: 16px;
+        flex: 2;
       }
       .icon {
-        font-size: 24px;
-        color: grey;
+        font-size: 15px;
+        color: black;
+        font-weight: 500;
+        flex: 1;
       }
       .icon1 {
         font-weight: 1000;
@@ -149,6 +140,7 @@
       }
       .icon3 {
         font-size: 28px;
+        flex: 1;
       }
       .text {
         font-size: 13px;
@@ -167,7 +159,7 @@
         text-align: right;
         display: flex;
         justify-content: space-between;
-        align-items: flex-end
+        align-items: flex-end;
       }
       .cards {
         height: 240px;
@@ -186,45 +178,114 @@
         border-radius: 20px;
       }
       .card1 {
-        background: linear-gradient(to right, rgb(235, 216, 198), rgb(185, 173, 230));
+        background: linear-gradient(
+          to right,
+          rgb(235, 216, 198),
+          rgb(185, 173, 230)
+        );
         margin-left: 40px;
       }
       .headercreditcard {
-      padding: 40px 50px;
-      font-weight: 600;
-      font-size: 11px;
+        padding: 40px 50px;
+        font-weight: 600;
+        font-size: 15px;
       }
       .subtitle {
-      padding-right: 30px;
-      font-weight: 600;
-      font-size: 11px;
-      color: grey;
-      text-decoration: underline;
+        padding-right: 40px;
+        font-weight: 600;
+        font-size: 15px;
+        color: grey;
+        text-decoration: underline;
       }
-
-
       .card2 {
-        background: linear-gradient(to right, rgb(235, 216, 198), rgb(233, 191, 163));
+        background: linear-gradient(
+          to right,
+          rgb(235, 216, 198),
+          rgb(233, 191, 163)
+        );
+        margin-left: 40px;
       }
-      .card3 {
-        background: rgb(212, 224, 189);
-      }
+
       .headercard {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 60px;
       }
       .block {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding-right: 40px;
       }
       .PKR {
         font-weight: 700;
-        font-size: 35px;
+        font-size: 30px;
+        margin-left: 50px;
+        flex: 5;
+      }
+      .currency {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+      }
+      .cur2 {
+        padding-right: 10px;
+      }
+      .blockcard2 {
+        display: flex;
+        justify-content: flex-start;
         margin-left: 40px;
+      }
+      .cube {
+        font-size: 40px;
+        color: rgb(192, 19, 19);
+        padding-right: 30px;
+      }
+      .procent {
+        color: rgb(192, 19, 19);
+      }
+      .untertitel {
+        font-weight: 600;
+        font-size: 15px;
+        margin-left: 110px;
+        line-height: 5px;
+      }
+      .card3 {
+        background: rgb(212, 224, 189);
+        margin-left: 50px;
+      }
+      .mastercard {
+        font-size: 60px;
+        margin-left: 50px;
+      }
+      .holder,
+      .valid,
+      .blockcard3 {
+        font-weight: 400;
+        font-size: 10px;
+        margin-left: 50px;
+        margin-right: 50px;
+        color: grey;
+      }
+      .namename,
+      .validdate,
+      .cardnummer {
+        font-weight: 600;
+        font-size: 28px;
+        margin-bottom: 20px;
+        margin-left: 50px;
+        margin-right: 40px;
+      }
+      .unterblockcard3 {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+      .name {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
       }
       .tasks {
         height: 180px;
@@ -249,11 +310,11 @@
         display: flex;
         margin-left: 40px;
       }
-        
+
       .headertasks {
         font-weight: 600;
         font-size: 11px;
-      }  
+      }
       .block1 {
         flex: 1;
       }
@@ -279,7 +340,7 @@
       }
       .nummer3 {
         font-size: 26px;
-        color:  rgb(79, 163, 79);
+        color: rgb(79, 163, 79);
         font-weight: 600;
       }
       .increase1 {
@@ -301,7 +362,6 @@
         background-color: rgb(189, 211, 189);
       }
       .transactions {
-        background: yellow;
         height: 350px;
         display: flex;
         justify-content: space-between;
@@ -313,94 +373,177 @@
         margin-right: 40px;
         margin-left: 40px;
         background-color: white;
+        padding: 10px;
+        line-height: 30px;
+        font-size: 12px;
       }
       .latest {
         flex: 2;
+        background: rgb(227, 222, 240);
+      }
+      .row1,
+      .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+      .date {
+        color: grey;
+        font-weight: 450;
+        font-size: 11px;
+      }
+      .buttons {
+        font-size: 60px;
+      }
+      .income,
+      .title {
+        color: rgb(10, 36, 71);
+      }
+      .expense {
+        color: rgb(157, 52, 52);
       }
       .upcoming {
         flex: 1;
       }
-
-
+      .success {
+        line-height: 5px;
+        padding-left: 50px;
+        color: gray;
+        font-size: 9px;
+      }
     </style>
   </head>
   <body>
     <aside class="sidebar">
       <figure>
-        <img width: 20px src="https://via.placeholder.com/150x20" alt="">
+        <img src="https://via.placeholder.com/150x20" alt="" />
       </figure>
-      <nav>
+      <nav class="nav">
         Main Navigation
-        <ul>
-          <li class="navigation">
-            <span class="navpicto">
-              <i class="las la-icons"></i>
-            </span>
-            <a href="Section 1">Daschboard</a>
-            <a href="Section 1">></a>
-
+        <ul class="nav__links">
+          <li class="nav__list">
+            <a class="nav__link" href="">
+              <div class="nav__main">
+                <span class="nav__icon">
+                  <i class="las la-icons"></i>
+                </span>
+                <span class="nav__text"> Daschboard </span>
+              </div>
+              <span class="nav__icon">
+                <i class="las la-angle-right"></i>
+              </span>
+            </a>
           </li>
-          <li class="navigation">
-            <span class="navpicto">
-              <i class="las la-icons"></i>
-            </span>
-            <a href="Section 1">Transactions</a>
-            <a href="Section 1">></a>
+          <li class="nav__list">
+            <a class="nav__link" href="">
+              <div class="nav__main">
+                <span class="nav__icon">
+                  <i class="las la-icons"></i>
+                </span>
+                <span class="nav__text"> Transactions </span>
+              </div>
+              <span class="nav__icon">
+                <i class="las la-angle-right"></i>
+              </span>
+            </a>
           </li>
-          <li class="navigation">
-            <span class="navpicto">
-              <i class="las la-icons"></i>
-            </span>
-            <a href="Section 1">Contacts</a>
-            <a href="Section 1">></a>
+          <li class="nav__list">
+            <a class="nav__link" href="">
+              <div class="nav__main">
+                <span class="nav__icon">
+                  <i class="las la-icons"></i>
+                </span>
+                <span class="nav__text"> Contacts </span>
+              </div>
+              <span class="nav__icon">
+                <i class="las la-angle-right"></i>
+              </span>
+            </a>
           </li>
-          <li class="navigation">
-            <span class="navpicto">
-              <i class="las la-icons"></i>
-            </span>
-            <a href="Section 1">Features</a>
-            <a href="Section 1">></a>
+          <li class="nav__list">
+            <a class="nav__link" href="">
+              <div class="nav__main">
+                <span class="nav__icon">
+                  <i class="las la-icons"></i>
+                </span>
+                <span class="nav__text"> Features </span>
+              </div>
+              <span class="nav__icon">
+                <i class="las la-angle-right"></i>
+              </span>
+            </a>
           </li>
-          <li class="navigation">
-            <span class="navpicto">
-              <i class="las la-icons"></i>
-            </span>
-            <a href="Section 1">Library</a>
-            <a href="Section 1">></a>
+          <li class="nav__list">
+            <a class="nav__link" href="">
+              <div class="nav__main">
+                <span class="nav__icon">
+                  <i class="las la-icons"></i>
+                </span>
+                <span class="nav__text"> Library </span>
+              </div>
+              <span class="nav__icon">
+                <i class="las la-angle-right"></i>
+              </span>
+            </a>
           </li>
         </ul>
       </nav>
 
-      <nav>
+      <nav class="nav">
         Settings & Schedules
-        <ul>
-          <li class="navigation">
-            <span class="navpicto">
-              <i class="las la-icons"></i>
-            </span>
-            <a href="Section 2">Base Wallet</a>
-            <a href="Section 1">></a>
+        <ul class="nav__links">
+          <li class="nav__list">
+            <a class="nav__link" href="">
+              <div class="nav__main">
+                <span class="nav__icon">
+                  <i class="las la-icons"></i>
+                </span>
+                <span class="nav__text"> Base Wallet </span>
+              </div>
+              <span class="nav__icon">
+                <i class="las la-angle-right"></i>
+              </span>
+            </a>
           </li>
-          <li class="navigation">
-            <span class="navpicto">
-              <i class="las la-icons"></i>
-            </span>
-            <a href="Section 2">My Contacts</a>
-            <a href="Section 1">></a>
+          <li class="nav__list">
+            <a class="nav__link" href="">
+              <div class="nav__main">
+                <span class="nav__icon">
+                  <i class="las la-icons"></i>
+                </span>
+                <span class="nav__text"> My Contacts </span>
+              </div>
+              <span class="nav__icon">
+                <i class="las la-angle-right"></i>
+              </span>
+            </a>
           </li>
-          <li class="navigation">
-            <span class="navpicto">
-              <i class="las la-icons"></i>
-            </span>
-            <a href="Section 2">Invoices</a>
-            <a href="Section 1">></a>
+          <li class="nav__list">
+            <a class="nav__link" href="">
+              <div class="nav__main">
+                <span class="nav__icon">
+                  <i class="las la-icons"></i>
+                </span>
+                <span class="nav__text"> Invoices </span>
+              </div>
+              <span class="nav__icon">
+                <i class="las la-angle-right"></i>
+              </span>
+            </a>
           </li>
-          <li class="navigation">
-            <span class="navpicto">
-              <i class="las la-icons"></i>
-            </span>
-            <a href="Section 2">Schedules</a>
-            <a href="Section 1">></a>
+
+          <li class="nav__list">
+            <a class="nav__link" href="">
+              <div class="nav__main">
+                <span class="nav__icon">
+                  <i class="las la-icons"></i>
+                </span>
+                <span class="nav__text"> Schedules </span>
+              </div>
+              <span class="nav__icon">
+                <i class="las la-angle-right"></i>
+              </span>
+            </a>
           </li>
         </ul>
       </nav>
@@ -412,15 +555,15 @@
               <i class="lar la-question-circle"></i>
             </figure>
           </div>
-          <h2>Help Center</h2>
-          <div class="content">
-            <h1>
-              Having trouble in Finti, Please contact us for more questions.
-            </h1>
-          </div>
-          <div>
-            <button class="help">Go To Help Center</button>
-          </div>
+        </div>
+        <h2>Help Center</h2>
+        <div class="content">
+          <h1>
+            Having trouble in Finti, Please contact us for more questions.
+          </h1>
+        </div>
+        <div>
+          <button class="help">Go To Help Center</button>
         </div>
       </div>
     </aside>
@@ -433,6 +576,7 @@
           </span>
           <input type="text" placeholder="Search.." />
         </div>
+
         <span class="icon1">
           <i class="las la-sticky-note"></i>
           <i class="las la-chart-area"></i>
@@ -448,48 +592,67 @@
           </span>
         </div>
       </div>
+
       <div class="cards">
         <div class="card1">
           <div class="headercard">
-            <h class="headercreditcard">You Working Balance</h>
-            <span class="subtitle">Saving Account
-                </span>
+            <h class="headercreditcard">Your Working Balance</h>
+            <span class="subtitle">Saving Account </span>
+          </div>
+          <div class="block">
+            <p class="PKR">PKR 9,250,000</p>
+            <div class="currency">
+              <h5 class="cur2">PKR</h5>
+              <span class="icon">
+                <i class="las la-angle-down"></i>
+              </span>
             </div>
-            <div class="block">
-              <p class="PKR">PKR 9,250,000</p>
-              <div class="currency">
-                <h5>PKR</h5>
-                <span class="icon">
-                    <i class="las la-angle-down"></i>
-                </span>
-              </div>
-            </div>
+          </div>
         </div>
+
         <div class="card2">
-            <div class="headercard">
-              <h class="headercreditcard">You Savong Status</h>
-              <figure class="subtitle">
-                <i class="lar la-question-circle"></i>
-              </figure>
-              </div>
-           </div>
-        
-           <div class="card3"></div>
+          <div class="headercard">
+            <h class="headercreditcard">Your Saving Status</h>
+            <figure class="subtitle">
+              <i class="lar la-question-circle"></i>
+            </figure>
+          </div>
+          <div class="blockcard2">
+            <span class="cube">
+              <i class="las la-cube"></i>
+            </span>
+            <h1 class="procent">4.28%</h1>
+          </div>
+          <h1 class="untertitel">Your spending increased</h1>
+        </div>
+
+        <div class="card3">
+          <div class="mastercard">
+            <i class="lab la-cc-mastercard"></i>
+          </div>
+          <h1 class="blockcard3">CARD NUMMER</h1>
+          <h1 class="cardnummer">3829 4820 4629 5025</h1>
+          <div class="unterblockcard3">
+            <h1 class="holder">CARD HOLDER NAME</h1>
+            <h1 class="valid">VAID THRU</h1>
+          </div>
+          <div class="name">
+            <h1 class="namename">Anita Rose</h1>
+            <h1 class="validdate">09/17</h1>
+          </div>
+        </div>
       </div>
-    </div>
 
       <div class="tasks">
         <div class="progress">
           <div class="block1">
             <span class="headertasks">
-            <p>Tasks in Progress</p>
+              <p>Tasks in Progress</p>
             </span>
             <div class="result">
-            <p class="nummer1">
-              210
-            </p>
-            <span class="increase1">23</span>
-          </div>
+              <p class="nummer1">210</p>
+              <span class="increase1">23</span>
+            </div>
             <p class="month">Current Month</p>
           </div>
           <div class="block2">
@@ -500,43 +663,128 @@
         <div class="completed">
           <div class="block1">
             <span class="headertasks">
-            <p>Tasks Completed</p>
+              <p>Tasks Completed</p>
             </span>
             <div class="result">
-            <p class="nummer2">
-              185
-            </p>
-            <span class="increase2">45</span>
-          </div>
+              <p class="nummer2">185</p>
+              <span class="increase2">45</span>
+            </div>
             <p class="month">Current Month</p>
           </div>
           <div class="block2">
             <i class="lar la-chart-bar"></i>
           </div>
         </div>
-      
+
         <div class="summary">
           <div class="block1">
             <span class="headertasks">
-            <p>Monthly Tasks Summary</p>
+              <p>Monthly Tasks Summary</p>
             </span>
             <div class="result">
-            <p class="nummer3">
-              1240
-            </p>
-            <span class="increase3">145</span>
-          </div>
+              <p class="nummer3">1240</p>
+              <span class="increase3">145</span>
+            </div>
             <p class="month">Current Month</p>
           </div>
           <div class="block2">
             <i class="lar la-chart-bar"></i>
           </div>
-
         </div>
       </div>
+
       <div class="transactions">
-        <div class="latest"></div>
-        <div class="upcoming"></div>
+        <div class="latest">
+          <div class="row">
+            <h3 class="title">Latest Transaction</h3>
+            <div class="buttons">
+              <button><i class="las la-search"></i></button>
+              <button><i class="lab la-gg-circle"></i></button>
+            </div>
+          </div>
+          <h3 class="date">Mon, March 1</h3>
+
+          <div class="row1">
+            <h3 class="title">
+              <i class="las la-arrow-right"></i>
+              Payment Sent to Shakir
+              <h3 class="expense">$560.00</h3>
+            </h3>
+          </div>
+          <div class="row1">
+            <h3 class="title">
+              <i class="las la-arrow-left"></i>
+              Salary from Redwhale
+              <h3 class="income">$12200.00</h3>
+            </h3>
+          </div>
+          <div class="row1">
+            <h3 class="title">
+              <i class="las la-arrow-right"></i>
+              Money sent to Wise.com
+              <h3 class="expense">$3000.00</h3>
+            </h3>
+          </div>
+          <h3 class="date">Mon, March 1</h3>
+          <div class="row1">
+            <h3 class="title">
+              <i class="las la-arrow-right"></i>
+              Purchased Macbook Pro
+              <h3 class="expense">$5560.00</h3>
+            </h3>
+          </div>
+        </div>
+
+        <div class="upcoming">
+          <div class="row">
+            <h3 class="title">Upcoming Transaction</h3>
+            <div class="buttons">
+              <button>View All</button>
+            </div>
+          </div>
+          <h3 class="date">Today</h3>
+          <div class="row1">
+            <h3 class="title">
+              <i class="las la-shower"></i>
+              Water Bill
+              <h3 class="expense">-$280.00</h3>
+            </h3>
+          </div>
+          <h3 class="success">Unsuccessfully</h3>
+          <h3 class="date">Tomorrow</h3>
+          <div class="row1">
+            <h3 class="title">
+              <i class="las la-file-invoice-dollar"></i>
+              Income: Salary Oct
+              <h3 class="income">+$1200.00</h3>
+            </h3>
+          </div>
+          <h3 class="success">Successfully</h3>
+          <div class="row1">
+            <h3 class="title">
+              <i class="las la-plug"></i>
+              Electric Bill
+              <h3 class="expense">-$480.00</h3>
+            </h3>
+          </div>
+          <h3 class="success">Successfully</h3>
+          <div class="row1">
+            <h3 class="title">
+              <i class="las la-file-invoice-dollar"></i>
+              Income: Jane tranfers
+              <h3 class="income">+$500.00</h3>
+            </h3>
+          </div>
+          <h3 class="success">Successfully</h3>
+          <div class="row1">
+            <h3 class="title">
+              <i class="las la-file-invoice-dollar"></i>
+              Income: Jane tranfers
+              <h3 class="income">+$500.00</h3>
+            </h3>
+          </div>
+          <h3 class="success">Successfully</h3>
+        </div>
       </div>
     </main>
   </body>
